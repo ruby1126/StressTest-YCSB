@@ -11,9 +11,9 @@ cd YCSB
 <li>編譯mongodb
 <pre><code>mvn -pl com.yahoo.ycsb:mongodb-binding -am clean package -DskipTests
 </code></pre>
-(若未安裝mvn則去https://maven.apache.org/download.cgi 下載並安裝)
-(編譯全部的指令:mvn clean package)
-(DskipTests參數代表跳過測試)
+<p>(若未安裝mvn則去https://maven.apache.org/download.cgi 下載並安裝)</p>
+<p>(編譯全部的指令:mvn clean package)</p>
+<p>(DskipTests參數代表跳過測試)</p>
 </li>
 </ol>
 
