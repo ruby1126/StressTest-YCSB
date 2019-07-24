@@ -8,23 +8,24 @@
 <pre><code>git clone git://github.com/brianfrankcooper/YCSB.git
 cd YCSB
 </code></pre>
-<li>編譯mongodb</li>
+<li>編譯mongodb
 <pre><code>mvn -pl com.yahoo.ycsb:mongodb-binding -am clean package -DskipTests
+</code></pre>
 (編譯全部的指令:mvn clean package)
 (DskipTests參數代表跳過測試)
-</code></pre>
+</li>
 </ol>
 
 ### 建構測試
 <ol>
-<li>構造測試數據，YCSB會基於參數設定，往數據庫裡面構造測試需要的數據(powershell執行)</li>
+<li>構造測試數據，YCSB會基於參數設定，往數據庫裡面構造測試需要的數據(powershell執行)
 <pre><code>bin/ycsb load mongodb-async -s -P workloads/workloada > outputLoad.txt</code></pre>
 ex:
 <pre><code>bin/ycsb load mongodb -s -P workloads/workloada -p mongodb.url=mongodb://帳號:密碼@127.0.0.1:27017
 bin/ycsb run mongodb -s -P workloads/workloada -p mongodb.url=mongodb://帳號:密碼@127.0.0.1:27017 > outputRun.txt
 </code></pre>
 "load"是在數據庫中創建數據。"run"是對數據庫中可用數據執行語句，可能包括讀取，插入和更新，具體取決於workloada的屬性。
-<br />
+</li>
 <li>Example</li>
 <pre><code>bin/ycsb run mongodb -s -P workloads/workloadf -p mongodb.url=mongodb://帳號:密碼@127.0.0.1:27017/?waitQueueMultiple=5000000  -threads 50000 -p operationcount=50000 
 </code></pre>
