@@ -40,7 +40,7 @@ bin：
 workloads：
 	- 目錄下有各種workload的模板，可以基於workload進行個性化修改
 
-  workloada：重更新負載：50/50% 混合讀/寫
+workloada：重更新負載：50/50% 混合讀/寫
 	workloadb：讀為主負載：95/5% 混合讀/寫
 	workloadc：只讀：100%讀
 	workloadd：最新讀負載：更多流量在當前插入
